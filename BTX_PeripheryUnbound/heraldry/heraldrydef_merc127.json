@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_merc127",
+    "Name": "Able's Aces",
+    "Details": "This is the heraldry def for the Able's Aces",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_Merc127",
+  "primaryMechColorID": "Orange_03",
+  "secondaryMechColorID": "Greyscale_01",
+  "tertiaryMechColorID": "Greyscale_05"
+}

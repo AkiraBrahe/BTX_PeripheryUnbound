@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_taurian2",
+    "Name": "Red Chasseurs",
+    "Details": "This is the heraldry def for the Red Chasseurs",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_TaurianConcordat2",
+  "primaryMechColorID": "Greyscale_05",
+  "secondaryMechColorID": "BrightYellow_01",
+  "tertiaryMechColorID": "BrightOrange_01"
+}

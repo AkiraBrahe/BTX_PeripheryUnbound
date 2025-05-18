@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_snowraven",
+    "Name": "Clan Snow Raven",
+    "Details": "This is the heraldry def for the Clan Snow Raven",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_SnowRaven",
+  "primaryMechColorID": "Greyscale_01",
+  "secondaryMechColorID": "Greyscale_02",
+  "tertiaryMechColorID": "Greyscale_02"
+}

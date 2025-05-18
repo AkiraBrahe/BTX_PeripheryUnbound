@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_tortuga",
+    "Name": "Tortuga Dominions",
+    "Details": "This is the heraldry def for the Tortuga Dominions",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_Tortuga",
+  "primaryMechColorID": "Greyscale_02",
+  "secondaryMechColorID": "Greyscale_02",
+  "tertiaryMechColorID": "Greyscale_05"
+}

@@ -1,0 +1,9 @@
+# Visual Studio build outputs
+.vs/
+bin/
+obj/
+
+# Mod duplicate files
+BTX_PeripheryUnbound/misc/overrides/*
+BTX_PeripheryUnbound/BTX_PeripheryUnbound.dll
+BTX_PeripheryUnbound/README.md

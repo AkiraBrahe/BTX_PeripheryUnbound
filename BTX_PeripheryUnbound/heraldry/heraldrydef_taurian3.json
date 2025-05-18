@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_taurian3",
+    "Name": "Concordat Cuirassiers",
+    "Details": "This is the heraldry def for the Concordat Cuirassiers",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_TaurianConcordat3",
+  "primaryMechColorID": "Orange_05",
+  "secondaryMechColorID": "Orange_04",
+  "tertiaryMechColorID": "Orange_05"
+}

@@ -1,0 +1,55 @@
+{
+  "ID": "faction_Tortuga",
+  "Name": "the Tortuga Dominions",
+  "ShortName": "Tortuga",
+  "Description": "The Tortuga Dominions is a small periphery bandit kingdom located spinward and rimward of Terra, beyond the Federated Suns. Ruled by a Dame or a Major, the kingdom sustains itself largely from occasional raids launched against the Federated Suns and the Taurian Concordat. The pirate armies of the Tortuga Dominions have earned a reputation for utter depravity, cruelty and ruthlessness.",
+  "Demonym": "Tortugan",
+  "Government": "Dominion",
+  "Allies": [
+    "PiratesTortuga"
+  ],
+  "Enemies": [
+    "Davion",
+    "TaurianConcordat",
+    "Outworld",
+    "Locals"
+  ],
+  "Presence": 0.1,
+  "ReputationStatements": [
+    "Listen scum, unless you want me to cut your flesh slowly from your body and feed it to the crows, you'd better stop attacking us and start helping us. Here's a contract—take it!",
+    "Don't even get me started on what we'll do to you and your shitty little company if you piss us off any more. Take this contract and stop fighting us, or else!",
+    "Commander, Death's Consorts don't mind a bit of a dust-up to get the blood pumping, but let's not cross swords again, eh? Take up this contract, and let's plunder together, eh?",
+    "So, you want to join the best pirate organization in known space, eh? Okay, here's a simple task for you to begin to prove yourself.",
+    "Commander, we've only just begun plundering together, but you've proven yourself capable. Here's a juicy contract for you, with a good amount of loot.",
+    "Hello, Commander. Word of your deeds has even reached Lady Death's ear. I've got another job for you, one where a good bit of loot is to be had.",
+    "Lady Death sends her compliments, Commander. She has authorized me to pass this contract on to you, as a sign of her faith in your abilities."
+  ],
+  "MissionSuccessStatements": [
+    "Well done, Commander! You finished off that contract easily, and your share of the loot is already in your account."
+  ],
+  "GoodFaithFailureStatements": [
+    "You'd never make it in the Tortuga Dominions with that sort of cowardly attitude! I'll partially pay you this time, but complete the damn contract next time, or else!"
+  ],
+  "BadFaithFailureStatements": [
+    "I should cut out your heart and enslave your entire crew for failing this simple task. Leave before I decide to do it!"
+  ],
+  "DefaultCombatLeaderCastDefId": "castDef_LocalsDefault",
+  "DefaultRepresentativeCastDefId": "castDef_LocalsDefault",
+  "DataManager": null,
+  "factionID": "Tortuga",
+  "icon": "uixTxrLogo_Tortuga",
+  "heraldryDefId": "heraldrydef_tortuga",
+  "storePanelImage": null,
+  "factionStoreColor": null,
+  "factionMapColor": "rgba(34,139,34,1.0)",
+  "StartingReputationValues": [
+    -15,
+    -15,
+    0
+  ],
+  "StartingReputationModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ]
+}

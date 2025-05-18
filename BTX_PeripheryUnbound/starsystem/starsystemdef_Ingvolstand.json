@@ -1,0 +1,163 @@
+{
+  "Description": {
+    "Id": "starsystemdef_Ingvolstand",
+    "Name": "Ingvolstand",
+    "Details": "The oldest inhabited system in the modern Chainelane Isles, Ingvolstand was once home to numerous huge manufacturing complexes which were destroyed during the Amaris Civil War. Nowadays it is ran by the Helena Collective, a matriarchal pirate band known for forcing men into servitude and many coming of age orgies. Less fun than it sounds.",
+    "Icon": ""
+  },
+  "Position": {
+    "x": -153.297,
+    "y": 570.181,
+    "z": 0
+  },
+  "Tags": {
+    "items": [
+      "planet_name_ingvolstand",
+      "planet_size_large",
+      "planet_climate_terran",
+      "planet_feature_moon01",
+      "planet_other_moon",
+      "planet_pop_medium",
+      "planet_industry_recreation",
+      "planet_industry_mining",
+      "planet_industry_manufacturing",
+      "planet_other_pirate",
+      "planet_faction_chainelane"
+    ],
+    "tagSetSourceFile": ""
+  },
+  "SupportedBiomes": [
+    "lowlandsSpring",
+    "lowlandsFall",
+    "highlandsSpring",
+    "highlandsFall",
+    "desertParched",
+    "badlandsParched",
+    "polarFrozen",
+    "tundraFrozen",
+    "jungleTropical"
+  ],
+  "MapRequiredTags": {
+    "items": [],
+    "tagSetSourceFile": ""
+  },
+  "MapExcludedTags": {
+    "items": [],
+    "tagSetSourceFile": ""
+  },
+  "FuelingStation": false,
+  "JumpDistance": 18,
+  "ownerID": "Chainelane",
+  "ShopRefreshRate": 0,
+  "ShopMaxInventory": 0,
+  "ShopMaxSpecials": 9,
+  "SystemInfluence": [
+    {
+      "factionID": "NoFaction",
+      "Influence": 0
+    },
+    {
+      "factionID": "Davion",
+      "Influence": 0
+    },
+    {
+      "factionID": "Liao",
+      "Influence": 0
+    },
+    {
+      "factionID": "Kurita",
+      "Influence": 0
+    },
+    {
+      "factionID": "Marik",
+      "Influence": 0
+    },
+    {
+      "factionID": "Steiner",
+      "Influence": 0
+    },
+    {
+      "factionID": "TaurianConcordat",
+      "Influence": 0
+    },
+    {
+      "factionID": "MagistracyOfCanopus",
+      "Influence": 0
+    },
+    {
+      "factionID": "AuriganDirectorate",
+      "Influence": 0
+    },
+    {
+      "factionID": "AuriganRestoration",
+      "Influence": 0
+    },
+    {
+      "factionID": "ComStar",
+      "Influence": 0
+    },
+    {
+      "factionID": "MercenaryReviewBoard",
+      "Influence": 0
+    },
+    {
+      "factionID": "AuriganPirates",
+      "Influence": 0
+    },
+    {
+      "factionID": "AuriganMercenaries",
+      "Influence": 0
+    }
+  ],
+  "TravelRequirements": [
+    {
+      "Scope": "Company",
+      "RequirementTags": {
+        "items": [
+          "map_travel_3"
+        ],
+        "tagSetSourceFile": ""
+      },
+      "ExclusionTags": {
+        "items": [],
+        "tagSetSourceFile": ""
+      },
+      "RequirementComparisons": []
+    }
+  ],
+  "StarPosition": null,
+  "StarType": "G",
+  "Depletable": false,
+  "UseSystemRoninHiringChance": false,
+  "RoninHiringChance": 0,
+  "UseMaxContractOverride": false,
+  "MaxContractOverride": 0,
+  "SystemShopItems": [
+    "itemCollection_minor_Locals",
+    "itemCollection_shop_mining",
+    "itemCollection_shop_manufacturing"
+  ],
+  "factionShopOwnerID": "INVALID_UNSET",
+  "FactionShopItems": null,
+  "BlackMarketShopItems": null,
+  "CoreSystemID": "starsystemdef_Ingvolstand",
+  "StartingSystemModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ],
+  "DefaultDifficulty": 6,
+  "DifficultyList": [],
+  "DifficultyModes": [],
+  "contractEmployerIDs": [
+    "Chainelane",
+    "Oberon",
+    "Valkyrate"
+  ],
+  "contractTargetIDs": [
+    "Chainelane",
+    "Oberon",
+    "Valkyrate",
+    "AuriganPirates"
+  ]
+}

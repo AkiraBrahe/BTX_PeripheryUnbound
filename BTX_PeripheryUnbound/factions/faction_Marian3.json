@@ -1,0 +1,57 @@
+{
+  "ID": "faction_Marian3",
+  "Name": "the III Legio Limitanei",
+  "ShortName": "the Hegemony",
+  "Description": "PLACEHOLDER",
+  "Demonym": "Marian",
+  "Government": "Hegemony",
+  "Allies": [
+    "PiratesMarian",
+    "PiratesCircinus",
+    "Circinus",
+    "Marian"
+  ],
+  "Enemies": [
+    "Marik",
+    "MagistracyOfCanopus",
+    "Illyrian",
+    "Locals"
+  ],
+  "Presence": 1.5,
+  "ReputationStatements": [
+    "What is it that you have against our glorious empire? Before I unleash the full might of the Legions against you, I offer one last opportunity to work for us. Your choice.",
+    "Instead of fighting the might of the Hegemony, would it not be more profitable to fight on the side of Caesar's Legions? I have a contract for you if you are interested.",
+    "Commander, you have fought the Legions before and acquitted yourself well. Rather than face the might of the Hegemony again, perhaps you would prefer to take up this task?",
+    "Greetings, Commander. Our Legions are occupied at the moment, and as a result, I have a task you can perform for the Hegemony.",
+    "Hello again, Commander. We appreciate your past assistance, and I am authorized to offer you another contract.",
+    "Hail Commander. You have proved quite useful to the Marian Hegemony, and I have saved this contract as reward for your services.",
+    "Hail Commander. If all our Legions were as effective as you, we would have an empire to match any of the Successor Houses. I have this contract that I would entrust to no other, for your consideration."
+  ],
+  "MissionSuccessStatements": [
+    "Commander, you have completed the objectives required, and have our thanks. Payment is being transferred to your account now."
+  ],
+  "GoodFaithFailureStatements": [
+    "Commander, if you were a Legionnaire, I would have you flogged for your incompetence. However, the contract stipulates partial payment for partial completion, so it has been done."
+  ],
+  "BadFaithFailureStatements": [
+    "I have half a mind to enslave you and your company for failing to complete any of the objectives. Leave my presence before I change my mind."
+  ],
+  "DefaultCombatLeaderCastDefId": "castDef_LocalsDefault",
+  "DefaultRepresentativeCastDefId": "castDef_LocalsDefault",
+  "DataManager": null,
+  "factionID": "Marian3",
+  "icon": "uixTxrLogo_Marian3",
+  "heraldryDefId": "heraldrydef_marian3",
+  "storePanelImage": null,
+  "factionStoreColor": null,
+  "StartingReputationValues": [
+    -15,
+    -15,
+    0
+  ],
+  "StartingReputationModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ]
+}

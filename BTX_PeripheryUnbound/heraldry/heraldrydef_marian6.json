@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_marian6",
+    "Name": "VI Legio Ripariensis",
+    "Details": "This is the heraldry def for the VI Legio Ripariensis",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_Marian6",
+  "primaryMechColorID": "Blue_02",
+  "secondaryMechColorID": "Blue_02",
+  "tertiaryMechColorID": "BrightWhite_01"
+}

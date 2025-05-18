@@ -1,0 +1,55 @@
+{
+  "ID": "faction_NewColonyRegion1",
+  "Name": "the Colonial Marshals",
+  "ShortName": "the NCR",
+  "Description": "PLACEHOLDER",
+  "Demonym": "NCR",
+  "Government": "State",
+  "Allies": [
+    "Liao",
+    "MagistracyOfCanopus",
+    "TaurianConcordat",
+    "NewColonyRegion"
+  ],
+  "Enemies": [
+    "AuriganPirates",
+    "Davion"
+  ],
+  "Presence": 1.5,
+  "ReputationStatements": [
+    "Clearly, we are at your mercy here, so I beg you to stop fighting us. If you want money or salvage, I can offer you those with this contract.",
+    "Please, the New Colony Region desperately needs you to stop fighting against us. I have been authorized to offer this contract in the hopes of a future together.",
+    "Commander, the New Colony Region faces pressure from other factions—we would really appreciate you considering this contract to perform a task for us.",
+    "The New Colony Region greets you, Commander. I can offer you this contract for your consideration.",
+    "Commander, we acknowledge your assistance in the past and offer you this contract in the hopes of continuing our beneficial relations.",
+    "Greetings, Commander. You have assisted the Alliance against our numerous foes, and we ask you to do so again, adequately compensated, of course.",
+    "Hello, my friend, It is good to see you. The Alliance has a task that I can't entrust to anyone else, and I hope you will accept this contract."
+  ],
+  "MissionSuccessStatements": [
+    "Well done, Commander. You have completed the required objectives, and I am happy to remit the full contracted amount to your account."
+  ],
+  "GoodFaithFailureStatements": [
+    "Commander, we required the primary objective to be completed. However, seeing as you did at least make an attempt, I will forward a partial payment to your account."
+  ],
+  "BadFaithFailureStatements": [
+    "How can you expect to be taken seriously as a mercenary if you can't even complete a simple contract? I hope you don't expect payment, as none will be forthcoming."
+  ],
+  "DefaultCombatLeaderCastDefId": "castDef_LocalsDefault",
+  "DefaultRepresentativeCastDefId": "castDef_LocalsDefault",
+  "DataManager": null,
+  "factionID": "NewColonyRegion1",
+  "icon": "uixTxrLogo_NewColonyRegion1",
+  "heraldryDefId": "heraldrydef_newcolonyregion1",
+  "storePanelImage": null,
+  "factionStoreColor": null,
+  "StartingReputationValues": [
+    -5,
+    -10,
+    0
+  ],
+  "StartingReputationModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ]
+}

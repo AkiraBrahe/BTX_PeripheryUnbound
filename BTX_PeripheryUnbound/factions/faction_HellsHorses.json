@@ -1,0 +1,48 @@
+{
+  "ID": "faction_HellsHorses",
+  "Name": "Clan Hell's Horses",
+  "ShortName": "Hell's Horses",
+  "Description": "Clan Hell's Horses is one of the original twenty Clans founded by Nicholas Kerensky. Embracing the philosophy of \"man before machine\", the Clan values the individual soldier above all else. This principle has shaped their unique battlefield tactics and their society, where all members are considered integral to the greater whole, regardless of birth.\n\nThough they did not participate in the original Clan Invasion, they later expanded into the Inner Sphere, securing numerous worlds.",
+  "Demonym": "Hell's Horses",
+  "Government": "Clan",
+  "Allies": [],
+  "Enemies": [],
+  "Presence": 1,
+  "ReputationStatements": [
+    "I normally don't look down on freeborns such as you, but your repeated actions against Hell's Horses have made me question whether I should hold you all in disdain. Take up this batchall and prove to me that you are useful.",
+    "You have fought against Hell's Horses on many occasions. Prove you can assist as well as cause harm by performing this task, and we might have further use for you.",
+    "Freeborn, my Clan has faced you in battle before, and you are a competent warrior. Take up this batchall and perhaps we can find a more common purpose.",
+    "Freeborn, you are an unknown to us. Prove yourself on the field of battle with this batchall, and we may have further use of you.",
+    "Freeborn, you have assisted the Hell's Horses in the past, and I would like to offer you this batchall so that we can continue this relationship.",
+    "Hello again, friend of the Hell's Horses clan. We offer you this batchall in recognition of our friendship and in the hopes that we can benefit each other in the future.",
+    "Greetings, my friend. You have helped me so often, and I feel we should discuss the possibility of you joining the Horses yourself. Before we do, however, there is a task I would entrust to no one else that you might assist us with."
+  ],
+  "MissionSuccessStatements": [
+    "Well done, Commander. The satisfactory completion of this batchall will benefit us both, and I have transferred your c-bills as agreed."
+  ],
+  "GoodFaithFailureStatements": [
+    "While Hell's Horses value swiftness, we don't value those who run from battle! However, I will provide a partial payment for your partial completion, so long as you do better next time."
+  ],
+  "BadFaithFailureStatements": [
+    "Your cowardice dishonors you, and you have failed to honor the terms of the batchall in any significant way. You receive nothing from me other than my disdain."
+  ],
+  "DefaultCombatLeaderCastDefId": "castDef_LocalsDefault",
+  "DefaultRepresentativeCastDefId": "castDef_LocalsDefault",
+  "DataManager": null,
+  "factionID": "HellsHorses",
+  "icon": "uixTxrLogo_HellsHorses",
+  "heraldryDefId": "heraldrydef_hellshorses",
+  "storePanelImage": null,
+  "factionStoreColor": null,
+  "factionMapColor": "rgba(241,168,110,1.0)",
+  "StartingReputationValues": [
+    -15,
+    -15,
+    0
+  ],
+  "StartingReputationModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ]
+}

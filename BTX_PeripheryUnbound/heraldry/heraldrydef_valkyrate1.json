@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_valkyrate1",
+    "Name": "Ryan's Rebels",
+    "Details": "This is the heraldry def for the Ryan's Rebels",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_Valkyrate1",
+  "primaryMechColorID": "Greyscale_03",
+  "secondaryMechColorID": "Greyscale_03",
+  "tertiaryMechColorID": "Greyscale_03"
+}

@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_rasalhagueA1",
+    "Name": "1st Tyr",
+    "Details": "This is the heraldry def for the 1st Tyr",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_RasalhagueA1",
+  "primaryMechColorID": "Blue_02",
+  "secondaryMechColorID": "Blue_02",
+  "tertiaryMechColorID": "Green_05"
+}

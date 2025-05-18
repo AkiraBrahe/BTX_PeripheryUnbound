@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_calderon",
+    "Name": "Calderon Protectorate",
+    "Details": "This is the heraldry def for the Calderon Protectorate",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_Calderon",
+  "primaryMechColorID": "Orange_02",
+  "secondaryMechColorID": "Orange_02",
+  "tertiaryMechColorID": "Red_04"
+}

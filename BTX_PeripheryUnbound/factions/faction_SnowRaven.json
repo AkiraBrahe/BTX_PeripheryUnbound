@@ -1,0 +1,48 @@
+{
+  "ID": "faction_SnowRaven",
+  "Name": "Clan Snow Raven",
+  "ShortName": "Snow Raven",
+  "Description": "Founded by Stephen McKenna, a distant relative of the famed Terran Hegemony hero James McKenna, Clan Snow Raven has carved a unique path among the Clans. Famed for their mastery of naval warfare and their cunning strategies, the Snow Ravens have often been misunderstood and mistrusted by their peers.\n\nAfter rising to prominence following the Clan Invasion, the Snow Ravens sought a new future in the Periphery, forging a strong alliance with the Outworlds Alliance.",
+  "Demonym": "Snow Raven",
+  "Government": "Clan",
+  "Allies": [],
+  "Enemies": [],
+  "Presence": 1,
+  "ReputationStatements": [
+    "I come to you seeking to reverse the distrust between us by offering you this batchall. I hope you will accept it.",
+    "I wish this emnity between us to go away so that we can offer you more exclusive batchalls. Please accept this so that we can move towards a more trusting relationship.",
+    "Freeborn, the Snow Ravens have faced you in battle before. Take up this batchall so we can mutually benefit from a closer relationship.",
+    "Freeborn, you are an unknown to us. Prove yourself on the field of battle with this batchall, and we may have further use of you.",
+    "Freeborn, you have assisted the Snow Ravens in the past. Continue to be useful by taking up this batchall and we will offer you more profitable tasks.",
+    "Hello again, my freeborn friend. I have saved this batchall especially for you in recognition of your fine service in the past.",
+    "It is good to see you, my friend. I have a particularly profitable batchall for you this time, one I can give to no one else."
+  ],
+  "MissionSuccessStatements": [
+    "As expected, you have performed the tasks required admirably. I have transferred the C-bills into your account and hope to work with you again."
+  ],
+  "GoodFaithFailureStatements": [
+    "It is such a shame that you couldn't complete the tasks assigned to you. Sadly, I can only offer you a partial payment for those tasks you did accomplish—strictly business, nothing personal."
+  ],
+  "BadFaithFailureStatements": [
+    "Freeborn, you can't expect to enter into a batchall and then fail to fulfill any of its conditions! You will need to try much harder if you wish to have any further dealings with the Snow Raven clan."
+  ],
+  "DefaultCombatLeaderCastDefId": "castDef_LocalsDefault",
+  "DefaultRepresentativeCastDefId": "castDef_LocalsDefault",
+  "DataManager": null,
+  "factionID": "SnowRaven",
+  "icon": "uixTxrLogo_SnowRaven",
+  "heraldryDefId": "heraldrydef_snowraven",
+  "storePanelImage": null,
+  "factionStoreColor": null,
+  "factionMapColor": "rgba(135,206,235,1.0)",
+  "StartingReputationValues": [
+    -15,
+    -15,
+    0
+  ],
+  "StartingReputationModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ]
+}

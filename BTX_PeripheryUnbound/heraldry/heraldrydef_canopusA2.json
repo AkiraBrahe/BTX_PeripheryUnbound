@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_canopusA2",
+    "Name": "1st Canopian Cuirassiers",
+    "Details": "This is the heraldry def for the 1st Canopian Cuirassiers",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_MagistracyOfCanopusA2",
+  "primaryMechColorID": "BrightOrange_02",
+  "secondaryMechColorID": "BrightOrange_02",
+  "tertiaryMechColorID": "Metallic_Silver"
+}

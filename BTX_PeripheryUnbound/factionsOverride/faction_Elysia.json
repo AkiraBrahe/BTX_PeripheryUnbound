@@ -1,0 +1,54 @@
+{
+  "ID": "faction_Elysia",
+  "Name": "the Elysian Fields",
+  "ShortName": "Elysia",
+  "Description": "A unique enclave within the Periphery, the Elysian Fields is a collection of pristine, temperate worlds maintained in their natural state. The inhabitants, followers of the One Star faith, live as hunter-gatherers, eschewing technology and civilization. Originally a private hold of the Inheritor philosophical movement, the Elysian Fields are now a de facto protectorate of the Oberon Confederation. In exchange for emergency repair and shore-leave rights for Oberon ships and personnel, King Hendrik Grimm has agreed to protect these worlds from external threats. The Elysian worlds' lack of commercial or geological value has ensured their isolation and sanctity.",
+  "Demonym": "Elysian",
+  "Government": "State",
+  "Allies": [
+    "PiratesOberon",
+    "Oberon"
+  ],
+  "Enemies": [
+    "Locals",
+    "Valkyrate"
+  ],
+  "Presence": 1,
+  "ReputationStatements": [
+    "Commander, please! We have endured enough of your deprivations and attacks on our faith, and our community. In the name of the One Star, will you please turn your attentions elsewhere if we pay you?",
+    "Commander, the Elysian Fields are but a few small planets desperately wishing to retain our peaceful way of life. Please stop fighting against us, and instead help us with this task.",
+    "Commander, if you have been attacking the planets of the Elysian Fields for money, we can offer you similar contracts that will preserve our way of life, and I beg you to consider this one.",
+    "Welcome to the Elysian Fields, Commander. We of the One Star faith are simple subsistence farmers and hunter/gathers, and normally have no need for martial forces. With this task however, you can help, if you wish.",
+    "Thank you again for your help in protecting the faithful of the Elysian Fields, Commander. We would like to employ you once more to defend our faith and way of life, if you are able?",
+    "Welcome blessed friend of the Elysian Fields. You have helped us many times in the past, and hope you can take on this contract to assist us in preserving our way of life once more.",
+    "The One Star bless and keep you well Commander. You have done so much for the One Star faith I feel embarrassed to ask for your help again, however I assure you that you will be well paid for your efforts."
+  ],
+  "MissionSuccessStatements": [
+    "Thank you Commander, and bless you for your assistance. Payment for your help has already been transferred to your account."
+  ],
+  "GoodFaithFailureStatements": [
+    "Commander, we appreciate all the help you can provide, but we can only pay you for tasks completed. May the One Star guide you to a more successful result next time."
+  ],
+  "BadFaithFailureStatements": [
+    "Commander, The light of the One Star can not reach those shrouded in their own darkness, and our c-bills cannot reach those who can't perform the tasks they are contracted to. Good day!"
+  ],
+  "DefaultCombatLeaderCastDefId": "castDef_LocalsDefault",
+  "DefaultRepresentativeCastDefId": "castDef_LocalsDefault",
+  "DataManager": null,
+  "factionID": "Elysia",
+  "icon": "uixTxrLogo_Elysia",
+  "heraldryDefId": "heraldrydef_elysia",
+  "storePanelImage": null,
+  "factionStoreColor": null,
+  "factionMapColor": "rgba(133,82,106,1.0)",
+  "StartingReputationValues": [
+    -5,
+    -5,
+    0
+  ],
+  "StartingReputationModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ]
+}

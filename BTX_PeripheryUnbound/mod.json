@@ -1,0 +1,33 @@
+{
+  "Name": "BTX_PeripheryUnbound",
+  "Enabled": true,
+  "Version": "1.0-alpha",
+  
+  "Description": "Add new Periphery systems and factions, including the infamous Bandit Kingdoms.",
+  "Author": "Kierk",
+  
+  "ConflictsWith": [],
+  "DependsOn": [ "ISM3025", "BT_Extended_Timeline" ],
+  "OptionallyDependsOn": [],
+  
+  "DLL": "BTX_PeripheryUnbound.dll",
+
+  "Settings": {
+    "HideJumpPointsOnStarMap": true,
+    "IntelShowTarget": true,
+    "IntelShowVariant": true
+  },
+
+  "DataAddendumEntries": [ 
+    { "name":"BattleTech.FactionEnumeration", "path":"enums/Faction.json", "AddToDB": true }
+  ],
+  "Manifest": [
+    { "Type": "CastDef", "Path": "cast" },
+    { "Type": "FactionDef", "Path": "factions", "AddToDB": true },
+    { "Type": "FactionDef", "Path": "factionsOverride", "ShouldMergeJSON": false },
+    { "Type": "HeraldryDef", "Path": "heraldry" },
+    { "Type": "Sprite", "Path": "sprites" },
+    { "Type": "Texture2D", "Path": "sprites" },
+    { "Type": "StarSystemDef", "Path": "starsystem"}
+  ]
+}

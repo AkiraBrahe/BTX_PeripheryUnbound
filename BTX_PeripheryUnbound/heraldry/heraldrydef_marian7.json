@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_marian7",
+    "Name": "Cohors Morituri",
+    "Details": "This is the heraldry def for the Cohors Morituri",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_Marian7",
+  "primaryMechColorID": "Greyscale_05",
+  "secondaryMechColorID": "Greyscale_05",
+  "tertiaryMechColorID": "Greyscale_05"
+}

@@ -1,0 +1,58 @@
+{
+  "ID": "faction_Valkyrate1",
+  "Name": "the Ryan's Rebels",
+  "ShortName": "Valkyrate",
+  "Description": "PLACEHOLDER",
+  "Demonym": "Valkyrian",
+  "Government": "Kingdom",
+  "Allies": [
+    "PiratesValkyrate",
+    "Valkyrate"
+  ],
+  "Enemies": [
+    "Davion",
+    "Kurita",
+    "Steiner",
+    "Locals",
+    "Oberon",
+    "Elysia",
+    "Rasalhague"
+  ],
+  "Presence": 1,
+  "ReputationStatements": [
+    "You want to get paid, don't you? Take this job, and we all end up with more money. You've got nothing to lose.",
+    "Mercenary, we have a job for you and money to waste. Do this, and you will be compensated above your station.",
+    "Welcome, mercenary. We have another job that requires attention—take it and don't dare fail us now.",
+    "Still hungry for money, I see? We have something that needs to be shot up.",
+    "We've got a nice raid planned and need something gone—do this, and we'll share in the riches.",
+    "Ahh, you're back for more? We always have someone to kill and places to plunder. Will you join us?",
+    "Welcome, friend! Join us on this raid and share in the booty."
+  ],
+  "MissionSuccessStatements": [
+    "Well done, mercenary. You are almost worth the money we spent on you."
+  ],
+  "GoodFaithFailureStatements": [
+    "At least you got the job done. Learn from this before we have to kill you ourselves."
+  ],
+  "BadFaithFailureStatements": [
+    "You dare to fail us? Begone, before I kill you myself!"
+  ],
+  "DefaultCombatLeaderCastDefId": "castDef_PirateDefaultCommander",
+  "DefaultRepresentativeCastDefId": "castDef_PirateDefault",
+  "DataManager": null,
+  "factionID": "Valkyrate1",
+  "icon": "uixTxrLogo_Valkyrate1",
+  "heraldryDefId": "heraldrydef_valkyrate1",
+  "storePanelImage": null,
+  "factionStoreColor": null,
+  "StartingReputationValues": [
+    -15,
+    -15,
+    0
+  ],
+  "StartingReputationModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ]
+}

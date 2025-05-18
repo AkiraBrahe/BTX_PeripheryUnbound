@@ -1,0 +1,62 @@
+{
+  "ID": "faction_Tikonov",
+  "Name": "the Tikonov Free Republic",
+  "ShortName": "Tikonov",
+  "Description": "The Tikonov Free Republic is a breakaway state cobbled together from remnants of the Tikonov Commonality under the iron grip of self-proclaimed President Ridzik. In early 3029, Federated Suns intelligence agents discovered Chancellor Maximillian Liao's orders to assassinate Colonel Pavel Ridzik. Ridzik was rescued by First Prince Hanse Davion and founded the Tikonov Free Republic. He returned to Elgin in March 3029 and implemented a loyal government, purging dissident elements and settling old scores.",
+  "Demonym": "Tikonov",
+  "Government": "Republic",
+  "Allies": [
+    "ComStar",
+    "Davion",
+    "Steiner",
+    "Ives"
+  ],
+  "Enemies": [
+    "Kurita",
+    "Liao",
+    "Marik",
+    "AuriganPirates",
+    "Locals",
+    "TaurianConcordat",
+    "Outworld",
+    "Andurien"
+  ],
+  "Presence": 1,
+  "ReputationStatements": [
+    "You have done more to undermine the existence of the Tikonov Free Republic than the Capellan Federation has since we left! Please reverse this trend by agreeing to this contract.",
+    "Commander, I am curious as to why you have fought so often against us in the past. If it was just for money, I can assure you that the Tikonov Free Republic is equally capable of paying for your services, such as this task.",
+    "Commander, the Tikonov Free Republic is a friendly place, and I wonder how we got off on the wrong foot. Let us put the past behind us and agree to suitable terms for this contract.",
+    "Welcome Commander. The Tikonov Free Republic requires the services of a competent lance of 'Mechs. Shall we discuss how you wish to be paid?",
+    "Hello again, Commander. Our past dealings have been successful, so I have another contract for your consideration.",
+    "Greetings, my friend. The Tikonov Free Republic appreciates all the help you have given us, and we would like to offer you this contract by way of thanks.",
+    "If it's not the Hero of Tikonov! I trust you like no one else, and having said that, I have a task I would entrust only to you. Shall we discuss payment?"
+  ],
+  "MissionSuccessStatements": [
+    "Thank you for your services, Commander. The Tikonov Free Republic has transferred the agreed payment into your account, and we hope to have further work for you soon."
+  ],
+  "GoodFaithFailureStatements": [
+    "Commander, we really required the primary objective to be completed, but I suppose I can provide a partial payment for what you did achieve."
+  ],
+  "BadFaithFailureStatements": [
+    "Commander, I don't know what happened, but we can't pay you when you completely fail the mission. I hope this never happens again, for everyone's sake."
+  ],
+  "DefaultCombatLeaderCastDefId": "castDef_LocalsDefault",
+  "DefaultRepresentativeCastDefId": "castDef_LocalsDefault",
+  "DataManager": null,
+  "factionID": "Tikonov",
+  "icon": "uixTxrLogo_Tikonov",
+  "heraldryDefId": "heraldrydef_tikonov",
+  "storePanelImage": null,
+  "factionStoreColor": null,
+  "factionMapColor": "rgba(126,157,178,1.0)",
+  "StartingReputationValues": [
+    0,
+    0,
+    0
+  ],
+  "StartingReputationModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ]
+}

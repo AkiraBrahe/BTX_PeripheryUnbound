@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_marian2",
+    "Name": "II Legio Cataphracti",
+    "Details": "This is the heraldry def for the II Legio Cataphracti",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_Marian2",
+  "primaryMechColorID": "Greyscale_01",
+  "secondaryMechColorID": "Blue_04",
+  "tertiaryMechColorID": "Orange_02"
+}

@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_calderon2",
+    "Name": "2nd Taurian Pride",
+    "Details": "This is the heraldry def for the 2nd Taurian Pride",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_Calderon2",
+  "primaryMechColorID": "Green_04",
+  "secondaryMechColorID": "BrightOrange_01",
+  "tertiaryMechColorID": "Green_04"
+}

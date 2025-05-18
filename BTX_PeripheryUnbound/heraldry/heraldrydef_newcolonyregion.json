@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_newcolonyregion",
+    "Name": "New Colony Region",
+    "Details": "This is the heraldry def for the New Colony Region",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_NewColonyRegion",
+  "primaryMechColorID": "Greyscale_05",
+  "secondaryMechColorID": "Greyscale_05",
+  "tertiaryMechColorID": "BrightOrange_01"
+}

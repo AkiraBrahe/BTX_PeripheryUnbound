@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_outworld4",
+    "Name": "1st Long Road Legion",
+    "Details": "This is the heraldry def for the 1st Long Road Legion",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_Outworld4",
+  "primaryMechColorID": "Greyscale_03",
+  "secondaryMechColorID": "Blue_05",
+  "tertiaryMechColorID": "Blue_03"
+}

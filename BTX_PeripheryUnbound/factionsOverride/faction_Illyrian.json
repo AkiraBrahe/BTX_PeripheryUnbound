@@ -1,0 +1,56 @@
+{
+  "ID": "faction_Illyrian",
+  "Name": "the Illyrian Palatinate",
+  "ShortName": "Illyria",
+  "Description": "The Illyrian Palatinate is a minor Periphery state founded by Scandinavian colonists in the mid-24th century. This peaceful trading nation, known for its steel production, maintains good relations with the Free Worlds League. However, it faces growing threats from both the Circinus Federation and the Marian Hegemony. To ensure its survival, the Palatinate has invested in its military and infrastructure, relying on both mercenaries and citizen militias.",
+  "Demonym": "Illyrian",
+  "Government": "Palatinate",
+  "Allies": [
+    "Marik"
+  ],
+  "Enemies": [
+    "AuriganPirates",
+    "Steiner",
+    "Liao",
+    "Marian",
+    "Circinus"
+  ],
+  "Presence": 1,
+  "ReputationStatements": [
+    "The Illyrian Palatinate has always welcomed mercenaries, yet you constantly attack us. Is it just for money? If you desire C-Bills so badly, we have this contract you can undertake that's not against us for a change.",
+    "I don't know what lies you have been told about the Illyrian Palatinate, but I can assure you that you have no reason to harm us. Please accept this contract, and we can start working together.",
+    "Commander, we of the Illyrian Palatinate don't want to embroil ourselves in conflict with you. Rather than attack us, let us work together for mutual benefit.",
+    "Greetings, Commander. The Illyrian Palatinate has a task requiring a competent lance of mercenaries. Can we discuss the details?",
+    "Greetings again, Commander. The Illyrian Palatinate once again has a small matter you can assist with, if you would care to help.",
+    "Hello again, friend of the Illyrian Palatinate. I have a task I would generally not entrust to a mercenary, but I am willing to pay you well to complete it.",
+    "Greetings, my trusted friend. The Illyrian Palatinate is already indebted to you for your services in the past, so I have saved this choice contract for you if you want it."
+  ],
+  "MissionSuccessStatements": [
+    "Well done, Commander. The satisfactory completion of this contract will benefit the Illyrian Palatinate, and we have transferred your C-bills to your account."
+  ],
+  "GoodFaithFailureStatements": [
+    "Your contract with the Illyrian Palatinate required you to complete the primary objective, not just \"make an attempt\". In the spirit of good faith, we will provide a partial payment this time—please don't let it happen again."
+  ],
+  "BadFaithFailureStatements": [
+    "Factions push at our borders, Rasalhagian refugees poor in to escape the conflicts, and now I have incompetent mercenary commanders who can't complete any of the objectives required. Go away, I have no time for your excuses."
+  ],
+  "DefaultCombatLeaderCastDefId": "castDef_LocalsDefault",
+  "DefaultRepresentativeCastDefId": "castDef_LocalsDefault",
+  "DataManager": null,
+  "factionID": "Illyrian",
+  "icon": "uixTxrLogo_Illyrian",
+  "heraldryDefId": "heraldrydef_Illyrian",
+  "storePanelImage": null,
+  "factionStoreColor": null,
+  "factionMapColor": "rgba(136,112,94,1.0)",
+  "StartingReputationValues": [
+    -15,
+    -15,
+    0
+  ],
+  "StartingReputationModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "ID": "faction_JarnFolk",
+  "Name": "the JàrnFòlk",
+  "ShortName": "JàrnFòlk",
+  "Description": "The JàrnFòlk, or \"Iron People\", are a society of Deep Periphery denizens hailing from the Rasalhagian worlds. Forced to flee the Draconis Combine's harsh treatment during the 2500s, they sought refuge in the Deep Periphery, settling approximately 250 light years spinward of Columbus. Today, they primarily live an agrarian lifestyle.",
+  "Demonym": "JàrnFòlk",
+  "Government": "Society",
+  "Allies": [],
+  "Enemies": [],
+  "Presence": 1,
+  "ReputationStatements": [
+    "The JàrnFòlk despise you, and I would shoot you myself if you stood before me. If you want to improve this situation, start by performing this small task for us.",
+    "You have sent many JàrnFòlk to Valhalla, including some of my own clan. Let us end this blood feud; assist us in this task, and we will pay you well.",
+    "Commander, the JàrnFòlk acknowledges your strength in combat. Let us turn that to our mutual profit, shall we?",
+    "Welcome, Commander. The JàrnFòlk are a peaceful agrarian people; however, there is a task that someone with your skills could assist us with.",
+    "Hello again, Commander. Our past dealings have been successful, so I have another contract for your consideration.",
+    "Greetings, my friend. The blood of our enemies flows freely by your hand, and we have another target for you.",
+    "Come, let us discuss the next target we wish you to go against. Odin will have a place at his table for you, my friend!"
+  ],
+  "MissionSuccessStatements": [
+    "You fight with the strength of Thor, Commander! Well done! Payment is being transferred as we speak."
+  ],
+  "GoodFaithFailureStatements": [
+    "Commander, we really required the primary objective to be completed, but I suppose I can provide a partial payment for what you did achieve."
+  ],
+  "BadFaithFailureStatements": [
+    "What sort of warrior are you that runs from battle? Do you not want to feast in Valhalla? Begone, before I kill you myself."
+  ],
+  "DefaultCombatLeaderCastDefId": "castDef_LocalsDefault",
+  "DefaultRepresentativeCastDefId": "castDef_LocalsDefault",
+  "DataManager": null,
+  "factionID": "JarnFolk",
+  "icon": "uixTxrLogo_JarnFolk",
+  "heraldryDefId": "heraldrydef_jarnfolk",
+  "storePanelImage": null,
+  "factionStoreColor": null,
+  "factionMapBorderOverrideColor": "rgba(0,0,0,1.0)",
+  "factionMapColor": "rgba(156,86,208,1.0)",
+  "StartingReputationValues": [
+    -5,
+    -5,
+    0
+  ],
+  "StartingReputationModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ]
+}

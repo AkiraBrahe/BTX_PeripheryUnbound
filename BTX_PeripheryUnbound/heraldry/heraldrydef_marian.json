@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_marian",
+    "Name": "Marian Hegemony",
+    "Details": "This is the heraldry def for the Marian Hegemony",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_Marian",
+  "primaryMechColorID": "Blue_01",
+  "secondaryMechColorID": "Greyscale_05",
+  "tertiaryMechColorID": "Metallic_Chrome"
+}

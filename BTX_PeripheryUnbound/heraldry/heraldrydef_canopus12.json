@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_canopus12",
+    "Name": "1st Canopian Brigade",
+    "Details": "This is the heraldry def for the 1st Canopian Brigade",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_MagistracyOfCanopus12",
+  "primaryMechColorID": "Orange_04",
+  "secondaryMechColorID": "Orange_03",
+  "tertiaryMechColorID": "BrightGreen_01"
+}

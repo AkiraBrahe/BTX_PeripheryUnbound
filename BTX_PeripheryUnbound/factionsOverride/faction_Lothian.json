@@ -1,0 +1,52 @@
+{
+  "ID": "faction_Lothian",
+  "Name": "the Lothian League",
+  "ShortName": "Lothia",
+  "Description": "The Lothian League is a small Periphery state composed of ice-covered planets located beyond the outer reaches of the Free Worlds League. Founded by refugees from the Taurian Concordat, the League has survived through trade, particularly in minerals and furs. Despite its isolation, the Lothian League has faced threats from renegade mercenaries and, now, the Marian Hegemony. Under the leadership of the Logan family, the League has persevered, maintaining a cautious stance toward the Inner Sphere while securing its survival in the harsh Periphery.",
+  "Demonym": "Lothian",
+  "Government": "League",
+  "Allies": [],
+  "Enemies": [
+    "AuriganPirates",
+    "Locals",
+    "Marian"
+  ],
+  "Presence": 1,
+  "ReputationStatements": [
+    "Why do you hunt the Lothian League so? Do you want our furs? Our minerals? Instead of conquest, why don't you work for us and take on this contract?",
+    "You do realize that the Lothian League also hires mercenary units? Take on this contract and fight for us instead of against us.",
+    "Commander, you have fought mercenary units working for us before and have proved yourself competent. Let us turn that to our mutual profit, shall we?",
+    "Welcome Commander. The Lothian League would like to offer you a contract if you are interested.",
+    "Hello again, Commander. Our past dealings have been successful, so I have another contract for your consideration.",
+    "Greetings, my friend. The Lothian League values your services, and I have another contract for you to consider.",
+    "Commander, you are the most favored of the Lothian League's mercenaries. I have saved this contract especially for you."
+  ],
+  "MissionSuccessStatements": [
+    "You have completed the objectives required, and we thank you. Payment is being transferred to your account now."
+  ],
+  "GoodFaithFailureStatements": [
+    "Commander, we really required the primary objective to be completed, but I suppose I can provide a partial payment for what you did achieve."
+  ],
+  "BadFaithFailureStatements": [
+    "We have a special place in the polar regions of Lothario for mercenaries who can't complete objectives. Be thankful that all I am doing is not paying you!"
+  ],
+  "DefaultCombatLeaderCastDefId": "castDef_LocalsDefault",
+  "DefaultRepresentativeCastDefId": "castDef_LocalsDefault",
+  "DataManager": null,
+  "factionID": "Lothian",
+  "icon": "uixTxrLogo_Lothian",
+  "heraldryDefId": "heraldrydef_lothian",
+  "storePanelImage": null,
+  "factionStoreColor": null,
+  "factionMapColor": "rgba(133,126,121,1.0)",
+  "StartingReputationValues": [
+    -5,
+    -5,
+    0
+  ],
+  "StartingReputationModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ]
+}

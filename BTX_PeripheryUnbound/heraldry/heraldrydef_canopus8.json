@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_canopus8",
+    "Name": "2nd Magistracy Highlanders",
+    "Details": "This is the heraldry def for the 2nd Magistracy Highlanders",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_MagistracyOfCanopus8",
+  "primaryMechColorID": "Greyscale_05",
+  "secondaryMechColorID": "Green_02",
+  "tertiaryMechColorID": "Green_02"
+}

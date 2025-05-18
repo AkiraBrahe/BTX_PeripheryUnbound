@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_canopus4",
+    "Name": "1st Canopian Fusiliers",
+    "Details": "This is the heraldry def for the 1st Canopian Fusiliers",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_MagistracyOfCanopus4",
+  "primaryMechColorID": "BrightRed_01",
+  "secondaryMechColorID": "BrightOrange_01",
+  "tertiaryMechColorID": "BrightRed_01"
+}

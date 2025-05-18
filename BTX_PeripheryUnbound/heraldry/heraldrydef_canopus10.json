@@ -1,0 +1,18 @@
+{
+  "Description": {
+    "Cost": 0,
+    "Rarity": 1,
+    "Purchasable": false,
+    "Manufacturer": "null",
+    "Model": "null",
+    "UIName": "null",
+    "Id": "heraldrydef_canopus10",
+    "Name": "2nd Raventhir Cuirassiers",
+    "Details": "This is the heraldry def for the 2nd Raventhir Cuirassiers",
+    "Icon": ""
+  },
+  "textureLogoID": "uixTxrLogo_MagistracyOfCanopus10",
+  "primaryMechColorID": "Yellow_03",
+  "secondaryMechColorID": "Green_05",
+  "tertiaryMechColorID": "Orange_02"
+}

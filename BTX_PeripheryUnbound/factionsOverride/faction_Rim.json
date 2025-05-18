@@ -1,0 +1,55 @@
+{
+  "ID": "faction_Rim",
+  "Name": "the Rim Collection",
+  "ShortName": "the Rim",
+  "Description": "The Rim Collection is a small nation-state emerging from the ashes of the Rim Worlds Republic. Founded by citizens yearning to revive the Republic's pre-Amaris ideals, the Collection fiercely guards its independence.",
+  "Demonym": "Rimmer",
+  "Government": "Democracy",
+  "Allies": [
+    "ComStar"
+  ],
+  "Enemies": [
+    "AuriganPirates",
+    "Locals",
+    "Circinus",
+    "Valkyrate"
+  ],
+  "Presence": 1,
+  "ReputationStatements": [
+    "I wouldn't turn to you unless I had no other option. Well, I have no other option. Do this if you care, and maybe we'll talk about paying.",
+    "We don't like you, and you don't like us, but still, I think we can do business. Want to change that?",
+    "Hello, Commander. You need money; we need work done. Take a look at this contract.",
+    "The Rim Collection is in need of some supplemental merchandise, and we've heard you're competent. Care to take a look?.",
+    "We've got a good thing going here, Commander; let's keep the roll going. Take a gander at this contract—I think you'll find it satisfactory.",
+    "Commander, the Rim has need of you again. We've got a great contract for you, and we hope you can take care of it for us. The compensation is good, like always.",
+    "We count on you like we count on Able's Aces, Commander. You're one of our own at this point. Do this contract, and rewards will flow as always."
+  ],
+  "MissionSuccessStatements": [
+    "Great show, Commander! The Rim is very pleased with your efforts. I've remitted payment; you should receive it shortly, and don't forget to come around again sometime."
+  ],
+  "GoodFaithFailureStatements": [
+    "You gave it a solid try there, Commander. You didn't get it done, but you did your damnest. Sometimes it doesn't work out. Thanks for the effort, at least."
+  ],
+  "BadFaithFailureStatements": [
+    "Commander, this effort is embarrassing for both of us. Don't bother contacting us for payment—it's not coming. Do better next time."
+  ],
+  "DefaultCombatLeaderCastDefId": "castDef_LocalsDefault",
+  "DefaultRepresentativeCastDefId": "castDef_LocalsDefault",
+  "DataManager": null,
+  "factionID": "Rim",
+  "icon": "uixTxrLogo_Rim",
+  "heraldryDefId": "heraldrydef_rim",
+  "storePanelImage": null,
+  "factionStoreColor": null,
+  "factionMapColor": "rgba(40,80,199,1.0)",
+  "StartingReputationValues": [
+    -5,
+    -5,
+    0
+  ],
+  "StartingReputationModes": [
+    "KAMEA_CAMPAIGN",
+    "CAREER",
+    "NONE"
+  ]
+}
