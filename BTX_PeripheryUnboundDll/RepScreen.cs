@@ -11,27 +11,27 @@ namespace BTX_PeripheryUnbound
 {
     internal class RepScreen
     {
+        private static readonly List<string> FixedFactions = new List<string>()
+        {
+            // --- Successor States ---
+            "Kurita", "Davion", "Liao", "Marik", "Steiner",
+            // --- Minor States ---
+            "Rasalhague", "Tikonov", "Ives", "Andurien", "Arc-RoyalDC",
+            // --- Periphery States ---
+            "Outworld", "TaurianConcordat", "AuriganDirectorate", "MagistracyOfCanopus", "Rim",
+            "Elysia", "Calderon", "NewColonyRegion", "Illyrian", "Lothian",
+            // --- Bandit Kingdoms ---
+            "Tortuga", "Marian", "Circinus", "Valkyrate", "Oberon",
+            // --- Criminal Organizations / Pirate Affiliates / Mercenaries ---
+            "CriminalYakuza", "CriminalCloak", "CriminalBeroskiFamily", "CriminalYizhiTong", "CriminalRostakovTong",
+            "CriminalManTLE", "CriminalRedCobraTriad", "CriminalMalthus", "PiratesSantander", "PiratesDamned",
+            "PiratesTortuga", "PiratesMarch", "PiratesAurigan", "PiratesMarian", "PiratesCircinus",
+            "PiratesExtractor", "PiratesValkyrate", "PiratesOberon", "PiratesBelt", "WolfsDragoons"
+        };
+
         [HarmonyPatch(typeof(SimGameState), "Rehydrate")]
         public static class ReorderFactions
         {
-            private static readonly List<string> FixedFactions = new List<string>()
-            {
-                // --- Successor States ---
-                "Kurita", "Davion", "Liao", "Marik", "Steiner",
-                // --- Minor States ---
-                "Rasalhague", "Tikonov", "Ives", "Andurien", "Arc-RoyalDC",
-                // --- Periphery States ---
-                "Outworld", "TaurianConcordat", "AuriganDirectorate", "MagistracyOfCanopus", "Rim",
-                "Elysia", "Calderon", "NewColonyRegion", "Illyrian", "Lothian",
-                // --- Bandit Kingdoms ---
-                "Tortuga", "Marian", "Circinus", "Valkyrate", "Oberon",
-                // --- Criminal Organizations / Pirate Affiliates / Mercenaries ---
-                "CriminalYakuza", "CriminalCloak", "CriminalBeroskiFamily", "CriminalYizhiTong", "CriminalRostakovTong",
-                "CriminalManTLE", "CriminalRedCobraTriad", "CriminalMalthus", "PiratesSantander", "PiratesDamned",
-                "PiratesTortuga", "PiratesMarch", "PiratesAurigan", "PiratesMarian", "PiratesCircinus",
-                "PiratesExtractor", "PiratesValkyrate", "PiratesOberon", "PiratesBelt", "WolfsDragoons"
-            };
-
             [HarmonyPostfix]
             public static void Postfix(SimGameState __instance)
             {
@@ -109,6 +109,49 @@ namespace BTX_PeripheryUnbound
                             }
                         }
                         headerIndex++;
+                    }
+                }
+            }
+        }
+
+        [HarmonyPatch(typeof(SGCaptainsQuartersReputationScreen), "RefreshWidgets")]
+        public static class CheckActivity
+        {
+            public static void Postfix(List<SGFactionReputationWidget> ___FactionPanelWidgets, ref SimGameState ___simState)
+            {
+                if (___FactionPanelWidgets == null || ___FactionPanelWidgets.Count == 0) return;
+
+                DateTime currentDate = ___simState.CurrentDate;
+                if (currentDate == FactionActivityTracker.LastDayUpdated)
+                {
+                    return;
+                }
+
+                FactionActivityTracker.LastDayUpdated = currentDate;
+
+                for (int i = 0; i < FixedFactions.Count; i++)
+                {
+                    SGFactionReputationWidget factionWidget = ___FactionPanelWidgets[i];
+                    string factionName = FixedFactions[i];
+
+                    bool isActive = FactionActivityTracker.IsFactionActive(factionName, currentDate);
+
+                    Transform overlay = factionWidget.transform.Find("noRep-overlay");
+                    if (overlay != null)
+                    {
+                        overlay.gameObject.SetActive(!isActive);
+                    }
+
+                    Transform logo = factionWidget.transform.Find("LOGO/factionLogo");
+                    if (logo != null)
+                    {
+                        var imageComponent = logo.GetComponent<UnityEngine.UI.Image>();
+                        if (imageComponent != null)
+                        {
+                            Color currentColor = imageComponent.color;
+                            currentColor.a = isActive ? 1f : 0.25f;
+                            imageComponent.color = currentColor;
+                        }
                     }
                 }
             }
