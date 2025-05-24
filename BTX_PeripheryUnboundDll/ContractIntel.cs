@@ -2,7 +2,6 @@
 using BattleTech.UI.TMProWrapper;
 using BattleTech.UI.Tooltips;
 using CustomUnits;
-using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +13,7 @@ namespace BTX_PeripheryUnbound
         [HarmonyPatch(typeof(LanceContractIntelWidget), "Init")]
         public static class AddTargetAndVariant
         {
-            private static readonly Dictionary<string, string> Variant = new Dictionary<string, string>()
+            private static readonly Dictionary<string, string> Variant = new()
             {
                 { "ThreeWayBattle_SearchDenialCS", "Default" },
                 { "ThreeWayBattle_SearchDenialCS_Easy", "Easy (Mixed Level II)" },
@@ -28,104 +27,98 @@ namespace BTX_PeripheryUnbound
             };
 
             [HarmonyPostfix]
+            [HarmonyWrapSafe]
             public static void Postfix(LocalizableText ContractDescriptionField, Contract contract)
             {
-                try
+                if (contract?.Override == null) return;
+
+                GameObject parentObject = ContractDescriptionField.transform.parent.gameObject;
+
+                LocalizableText targetText = parentObject.FindComponent<LocalizableText>("txt_target");
+                LocalizableText variantText = parentObject.FindComponent<LocalizableText>("txt_variant");
+
+                if (Main.Settings.IntelShowTarget)
                 {
-                    if (contract != null && contract.Override != null)
+                    string factionId = contract.Override.targetTeam.faction;
+                    if (!string.IsNullOrEmpty(factionId))
                     {
-                        GameObject parentObject = ContractDescriptionField.transform.parent.gameObject;
+                        string targetFactionName = contract.Override.targetTeam.FactionDef?.Name ?? factionId;
+                        if (targetFactionName.StartsWith("the ", StringComparison.OrdinalIgnoreCase))
+                            targetFactionName = targetFactionName.Substring(4);
 
-                        LocalizableText targetText = parentObject.FindComponent<LocalizableText>("txt_target");
-                        LocalizableText variantText = parentObject.FindComponent<LocalizableText>("txt_variant");
+                        targetText = SetupTextComponent(
+                            targetText,
+                            parentObject,
+                            ContractDescriptionField,
+                            "txt_target",
+                            $"Target: <color=#F79B26>{targetFactionName}</color>",
+                            parentObject.transform.GetSiblingIndex() + 1
+                        );
 
-                        // Add primary target
-                        if (Main.Settings.IntelShowTarget)
-                        {
-                            if (targetText == null && !string.IsNullOrEmpty(contract.Override.targetTeam.faction))
-                            {
-                                targetText = UnityEngine.Object.Instantiate(ContractDescriptionField.gameObject).GetComponent<LocalizableText>();
-                                if (targetText != null)
-                                {
-                                    targetText.gameObject.transform.SetParent(parentObject.transform);
-                                    targetText.gameObject.transform.SetSiblingIndex(parentObject.transform.GetSiblingIndex() + 1);
-                                    targetText.gameObject.transform.localScale = Vector3.one;
-                                    targetText.gameObject.name = "txt_target";
-
-                                    string targetFactionName = contract.Override.targetTeam.FactionDef?.Name ?? contract.Override.targetTeam.faction;
-                                    if (targetFactionName.StartsWith("the ", StringComparison.OrdinalIgnoreCase))
-                                    {
-                                        targetFactionName = targetFactionName.Substring(4);
-                                    }
-                                    targetText.SetText($"Target: <color=#F79B26>{targetFactionName}</color>", Array.Empty<object>());
-
-                                    HBSTooltip targetTooltip = targetText.gameObject.GetComponent<HBSTooltip>() ?? targetText.gameObject.AddComponent<HBSTooltip>();
-                                    targetTooltip.SetDefaultStateData(null);
-
-                                    FactionDef targetFactionDef = UnityGameInstance.BattleTechGame.Simulation?.GetFactionDef(contract.Override.targetTeam.faction);
-                                    targetTooltip.SetDefaultStateData(TooltipUtilities.GetStateDataFromObject(targetFactionDef));
-                                }
-                                else
-                                {
-                                    Main.Log.LogWarning("Instantiation of target widget failed.");
-                                }
-                            }
-                            else if (targetText != null && !string.IsNullOrEmpty(contract.Override.targetTeam.faction))
-                            {
-                                string targetFactionName = contract.Override.targetTeam.FactionDef?.Name ?? contract.Override.targetTeam.faction;
-                                if (targetFactionName.StartsWith("the ", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    targetFactionName = targetFactionName.Substring(4);
-                                }
-                                targetText.SetText($"Target: <color=#F79B26>{targetFactionName}</color>", Array.Empty<object>());
-
-                                HBSTooltip targetTooltip = targetText.gameObject.GetComponent<HBSTooltip>() ?? targetText.gameObject.AddComponent<HBSTooltip>();
-                                targetTooltip.SetDefaultStateData(null);
-
-                                FactionDef targetFactionDef = UnityGameInstance.BattleTechGame.Simulation?.GetFactionDef(contract.Override.targetTeam.faction);
-                                targetTooltip.SetDefaultStateData(TooltipUtilities.GetStateDataFromObject(targetFactionDef));
-                            }
-                        }
-
-                        // Add mission variant (for specific contracts)
-                        if (Main.Settings.IntelShowVariant)
-                        {
-                            if (variantText == null && Variant.TryGetValue(contract.Override.ID, out string variantDescription))
-                            {
-                                variantText = UnityEngine.Object.Instantiate(ContractDescriptionField.gameObject).GetComponent<LocalizableText>();
-                                if (variantText != null)
-                                {
-                                    variantText.gameObject.transform.SetParent(parentObject.transform);
-                                    variantText.gameObject.transform.SetSiblingIndex(parentObject.transform.GetSiblingIndex() + (targetText != null ? 2 : 1));
-                                    variantText.gameObject.transform.localScale = Vector3.one;
-                                    variantText.gameObject.name = "txt_variant";
-                                    variantText.SetText($"Variant: <color=#F79B26>{variantDescription}</color>", Array.Empty<object>());
-
-                                    HBSTooltip variantTooltip = variantText.gameObject.GetComponent<HBSTooltip>();
-                                    variantTooltip?.SetDefaultStateData(null);
-                                }
-                                else
-                                {
-                                    Main.Log.LogWarning("Instantiation of variant widget failed.");
-                                }
-                            }
-                            else if (variantText != null && Variant.ContainsKey(contract.Override.ID))
-                            {
-                                variantText.SetText($"Variant: <color=#F79B26>{Variant[contract.Override.ID]}</color>", Array.Empty<object>());
-
-                                HBSTooltip variantTooltip = variantText.gameObject.GetComponent<HBSTooltip>();
-                                variantTooltip?.SetDefaultStateData(null);
-                            }
-                            else if (variantText != null && !Variant.ContainsKey(contract.Override.ID))
-                            {
-                                UnityEngine.Object.Destroy(variantText.gameObject);
-                            }
-                        }
+                        SetupTooltip(targetText, contract.Override.targetTeam.faction);
                     }
                 }
-                catch (Exception ex)
+
+                if (Main.Settings.IntelShowVariant)
                 {
-                    Main.Log.LogException(ex);
+                    if (Variant.TryGetValue(contract.Override.ID, out string variantDescription))
+                    {
+                        variantText = SetupTextComponent(
+                            variantText,
+                            parentObject,
+                            ContractDescriptionField,
+                            "txt_variant",
+                            $"Variant: <color=#F79B26>{variantDescription}</color>",
+                            parentObject.transform.GetSiblingIndex() + ((targetText != null) ? 2 : 1)
+                        );
+                        SetupTooltip(variantText, null);
+                    }
+                    else if (variantText != null)
+                    {
+                        UnityEngine.Object.Destroy(variantText.gameObject);
+                    }
+                }
+            }
+
+            internal static LocalizableText SetupTextComponent(
+                LocalizableText existing,
+                GameObject parent,
+                LocalizableText template,
+                string name,
+                string text,
+                int siblingIndex)
+            {
+                if (existing == null)
+                {
+                    var newText = UnityEngine.Object.Instantiate(template.gameObject).GetComponent<LocalizableText>();
+                    if (newText != null)
+                    {
+                        newText.gameObject.transform.SetParent(parent.transform);
+                        newText.gameObject.transform.SetSiblingIndex(siblingIndex);
+                        newText.gameObject.transform.localScale = Vector3.one;
+                        newText.gameObject.name = name;
+                        newText.SetText(text);
+                    }
+                    return newText;
+                }
+                else
+                {
+                    existing.SetText(text);
+                    return existing;
+                }
+            }
+
+            internal static void SetupTooltip(LocalizableText text, string factionId)
+            {
+                if (text != null)
+                {
+                    var tooltip = text.gameObject.GetComponent<HBSTooltip>() ?? text.gameObject.AddComponent<HBSTooltip>();
+                    tooltip.SetDefaultStateData(null);
+                    if (!string.IsNullOrEmpty(factionId))
+                    {
+                        var factionDef = UnityGameInstance.BattleTechGame.Simulation?.GetFactionDef(factionId);
+                        tooltip.SetDefaultStateData(TooltipUtilities.GetStateDataFromObject(factionDef));
+                    }
                 }
             }
         }

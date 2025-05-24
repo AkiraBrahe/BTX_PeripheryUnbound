@@ -1,6 +1,5 @@
 ﻿using BattleTech;
 using BEXTimeline;
-using HarmonyLib;
 using ISM3025.Features;
 using System;
 using System.Collections.Generic;
@@ -37,7 +36,7 @@ namespace BTX_PeripheryUnbound
                 if (simulation.CurrentDate > new DateTime(3050, 1, 1) &&
                     (__result == "PiratesValkyrate" || __result == "PiratesOberon"))
                 {
-                    if (UnityEngine.Random.Range(0f, 1f) < 0.5f) // 50% chance
+                    if (UnityEngine.Random.Range(0f, 1f) < 0.5f)
                     {
                         __result = "DarkCaste";
                     }
@@ -69,13 +68,12 @@ namespace BTX_PeripheryUnbound
             public static void Postfix(StarmapRenderer renderer)
             {
                 Transform logosParent = renderer.restorationLogo.transform.parent;
-                List<Transform> list = logosParent.GetComponentsInChildren<Transform>(true)
+                List<Transform> logoList = [.. logosParent.GetComponentsInChildren<Transform>(true)
                     .Where(t => t.gameObject.name.EndsWith("Logo"))
-                    .OrderBy(t => t.gameObject.name)
-                    .ToList();
+                    .OrderBy(t => t.gameObject.name)];
 
                 var seen = new HashSet<string>();
-                foreach (var logo in list)
+                foreach (var logo in logoList)
                 {
                     if (!seen.Add(logo.gameObject.name))
                     {
