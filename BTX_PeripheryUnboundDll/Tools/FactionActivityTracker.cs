@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BTX_PeripheryUnbound
+namespace BTX_PeripheryUnbound.Tools
 {
     internal class FactionActivityTracker
     {
@@ -16,6 +16,7 @@ namespace BTX_PeripheryUnbound
                               (currentDate >= new DateTime(3079, 01, 25) && currentDate < new DateTime(3152, 12, 31)),
                 "Arc-RoyalDC" => currentDate >= new DateTime(3057, 12, 01) && currentDate < new DateTime(3067, 04, 24),
                 "Rim" => currentDate >= new DateTime(3048, 01, 24) && currentDate < new DateTime(3148, 06, 24),
+                "Elysia" => currentDate >= new DateTime(2900, 09, 28) && currentDate < new DateTime(3049, 09, 18),
                 "Calderon" => currentDate >= new DateTime(3066, 04, 01) && currentDate < new DateTime(3152, 12, 31),
                 "NewColonyRegion" => currentDate >= new DateTime(3057, 01, 09) && currentDate < new DateTime(3152, 12, 31),
                 "Illyrian" => currentDate >= new DateTime(2444, 02, 22) && currentDate < new DateTime(3063, 06, 30),

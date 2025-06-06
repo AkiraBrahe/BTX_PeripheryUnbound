@@ -2,7 +2,7 @@
 using BEXTimeline;
 using System;
 
-namespace BTX_PeripheryUnbound
+namespace BTX_PeripheryUnbound.Timeline
 {
     internal class Factions
     {
@@ -42,6 +42,23 @@ namespace BTX_PeripheryUnbound
                     faction.ShortName = values.ShortName;
                     faction.Description = values.Description;
                     faction.Demonym = values.Demonym;
+                }
+            }
+        }
+
+        [HarmonyPatch(typeof(PirateHelper), "GetClosestPirate")]
+        public static class ChangeClosestPirate
+        {
+            [HarmonyPostfix]
+            public static void Postfix(ref string __result)
+            {
+                if (__result == "PiratesHaven")
+                {
+                    __result = "PiratesTortuga";
+                }
+                else if (__result == "PiratesAstrokaszy")
+                {
+                    __result = "PiratesMarian";
                 }
             }
         }

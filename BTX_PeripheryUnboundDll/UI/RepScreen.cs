@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace BTX_PeripheryUnbound
+namespace BTX_PeripheryUnbound.UI
 {
     internal class RepScreen
     {
@@ -126,16 +126,16 @@ namespace BTX_PeripheryUnbound
                 if (___FactionPanelWidgets == null || ___FactionPanelWidgets.Count == 0) return;
 
                 DateTime currentDate = ___simState.CurrentDate;
-                if (currentDate == FactionActivityTracker.LastDayUpdated) return;
+                if (currentDate == Tools.FactionActivityTracker.LastDayUpdated) return;
 
-                FactionActivityTracker.LastDayUpdated = currentDate;
+                Tools.FactionActivityTracker.LastDayUpdated = currentDate;
 
                 for (int i = 0; i < FixedFactions.Count && i < ___FactionPanelWidgets.Count; i++)
                 {
                     SGFactionReputationWidget factionWidget = ___FactionPanelWidgets[i];
                     string factionName = FixedFactions[i];
 
-                    bool isActive = FactionActivityTracker.IsFactionActive(factionName, currentDate);
+                    bool isActive = Tools.FactionActivityTracker.IsFactionActive(factionName, currentDate);
 
                     SetWidgetActivity(factionWidget, isActive);
                 }

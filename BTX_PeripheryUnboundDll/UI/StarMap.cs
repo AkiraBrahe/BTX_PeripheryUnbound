@@ -1,12 +1,10 @@
 ﻿using BattleTech;
-using BEXTimeline;
 using ISM3025.Features;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace BTX_PeripheryUnbound
+namespace BTX_PeripheryUnbound.UI
 {
     internal class StarMap
     {
@@ -22,24 +20,6 @@ namespace BTX_PeripheryUnbound
                 {
                     __instance.starInner.gameObject.SetActive(false);
                     __instance.starInnerUnvisited.gameObject.SetActive(false);
-                }
-            }
-        }
-
-        [HarmonyPatch(typeof(PirateHelper), "GetClosestPirate")]
-        public static class AddDarkCaste
-        {
-            [HarmonyPostfix]
-            public static void Postfix(ref string __result)
-            {
-                SimGameState simulation = UnityGameInstance.BattleTechGame.Simulation;
-                if (simulation.CurrentDate > new DateTime(3050, 1, 1) &&
-                    (__result == "PiratesValkyrate" || __result == "PiratesOberon"))
-                {
-                    if (UnityEngine.Random.Range(0f, 1f) < 0.5f)
-                    {
-                        __result = "DarkCaste";
-                    }
                 }
             }
         }

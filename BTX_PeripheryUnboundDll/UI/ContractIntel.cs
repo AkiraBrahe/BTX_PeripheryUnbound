@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BTX_PeripheryUnbound
+namespace BTX_PeripheryUnbound.UI
 {
     internal class ContractIntel
     {
@@ -80,13 +80,7 @@ namespace BTX_PeripheryUnbound
                 }
             }
 
-            internal static LocalizableText SetupTextComponent(
-                LocalizableText existing,
-                GameObject parent,
-                LocalizableText template,
-                string name,
-                string text,
-                int siblingIndex)
+            internal static LocalizableText SetupTextComponent(LocalizableText existing, GameObject parent, LocalizableText template, string name, string text, int siblingIndex)
             {
                 if (existing == null)
                 {
