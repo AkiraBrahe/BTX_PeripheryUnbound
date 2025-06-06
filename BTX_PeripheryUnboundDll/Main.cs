@@ -22,6 +22,7 @@ namespace BTX_PeripheryUnbound
             public bool HideJumpPointsOnStarMap { get; set; } = true;
             public bool IntelShowTarget { get; set; } = true;
             public bool IntelShowVariant { get; set; } = true;
+            public bool UpdateStarSystemDefsOnLoad { get; set; } = false;
         }
 
         public static void Init(string directory, string settingsJSON)
