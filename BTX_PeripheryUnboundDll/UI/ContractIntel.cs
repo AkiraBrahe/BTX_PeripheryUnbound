@@ -37,7 +37,7 @@ namespace BTX_PeripheryUnbound.UI
                 LocalizableText targetText = parentObject.FindComponent<LocalizableText>("txt_target");
                 LocalizableText variantText = parentObject.FindComponent<LocalizableText>("txt_variant");
 
-                if (Main.Settings.IntelShowTarget)
+                if (Main.Settings.ContractIntel.IntelShowTarget)
                 {
                     string factionId = contract.Override.targetTeam.faction;
                     if (!string.IsNullOrEmpty(factionId))
@@ -59,7 +59,7 @@ namespace BTX_PeripheryUnbound.UI
                     }
                 }
 
-                if (Main.Settings.IntelShowVariant)
+                if (Main.Settings.ContractIntel.IntelShowVariant)
                 {
                     if (Variant.TryGetValue(contract.Override.ID, out string variantDescription))
                     {

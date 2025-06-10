@@ -14,8 +14,7 @@ namespace BTX_PeripheryUnbound.UI
             [HarmonyPostfix]
             public static void Postfix(StarmapSystemRenderer __instance)
             {
-                if (Main.Settings.HideJumpPointsOnStarMap &&
-                    __instance.system.System.Def.Tags != null &&
+                if (Main.Settings.MapVisuals.HideJumpPoints &&
                     __instance.system.System.Def.Tags.Contains("planet_other_jumppoint"))
                 {
                     __instance.starInner.gameObject.SetActive(false);
@@ -25,7 +24,7 @@ namespace BTX_PeripheryUnbound.UI
         }
 
         [HarmonyPatch(typeof(FactionValue), "GetMapBorderColor")]
-        public static class OverrideBorderColor
+        public static class UseMapBorderOverrideColor
         {
             [HarmonyFinalizer]
             public static void Finalizer(FactionValue __instance, ref Color __result)
@@ -49,15 +48,15 @@ namespace BTX_PeripheryUnbound.UI
             {
                 Transform logosParent = renderer.restorationLogo.transform.parent;
                 List<Transform> logoList = [.. logosParent.GetComponentsInChildren<Transform>(true)
-                    .Where(t => t.gameObject.name.EndsWith("Logo"))
-                    .OrderBy(t => t.gameObject.name)];
+                        .Where(t => t.gameObject.name.EndsWith("Logo"))
+                        .OrderBy(t => t.gameObject.name)];
 
                 var seen = new HashSet<string>();
                 foreach (var logo in logoList)
                 {
                     if (!seen.Add(logo.gameObject.name))
                     {
-                        UnityEngine.Object.Destroy(logo.gameObject);
+                        Object.Destroy(logo.gameObject);
                     }
                     else
                     {

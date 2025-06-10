@@ -9,11 +9,11 @@ namespace BTX_PeripheryUnbound.Tools
     internal class StarSystemDefUpdater
     {
         [HarmonyPatch(typeof(SimGameState), "Rehydrate")]
-        public static class SimGameState_Rehydrate_UpdatePatch
+        public static class UpdateStarSystemDefsOnLoad
         {
             public static void Postfix(SimGameState __instance)
             {
-                if (Main.Settings.UpdateStarSystemDefsOnLoad)
+                if (Main.Settings.Debug.UpdateStarSystemDefsOnLoad)
                 {
                     UpdateStarSystemDefFiles(__instance, "Rehydrate");
                 }

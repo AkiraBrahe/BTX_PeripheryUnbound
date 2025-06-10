@@ -14,12 +14,13 @@ namespace BTX_PeripheryUnbound.Timeline
             public static void Finalizer(StarSystemDef def)
             {
                 SortFactionList(def.ContractEmployerIDList, def.OwnerValue.Name);
-                SortFactionList(def.ContractTargetIDList, def.OwnerValue.Name);
-
                 UpdateFactionList(def.ContractEmployerIDList, def.OwnerValue.Name, true);
+
+                SortFactionList(def.ContractTargetIDList, def.OwnerValue.Name);
                 UpdateFactionList(def.ContractTargetIDList, def.OwnerValue.Name, false);
             }
         }
+
         private static void SortFactionList(List<string> factionList, string ownerFactionID)
         {
             HashSet<string> uniqueFactions = [.. factionList];

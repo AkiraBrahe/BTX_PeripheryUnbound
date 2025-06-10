@@ -47,6 +47,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModSettings.cs" />
     <Compile Include="Timeline\Contracts.cs" />
     <Compile Include="UI\ContractIntel.cs" />
     <Compile Include="Tools\StarSystemDefUpdater.cs" />

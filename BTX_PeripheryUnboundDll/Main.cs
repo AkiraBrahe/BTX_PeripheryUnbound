@@ -17,14 +17,6 @@ namespace BTX_PeripheryUnbound
         internal static ILog Log { get; private set; }
         internal static ModSettings Settings { get; private set; }
 
-        public class ModSettings
-        {
-            public bool HideJumpPointsOnStarMap { get; set; } = true;
-            public bool IntelShowTarget { get; set; } = true;
-            public bool IntelShowVariant { get; set; } = true;
-            public bool UpdateStarSystemDefsOnLoad { get; set; } = false;
-        }
-
         public static void Init(string directory, string settingsJSON)
         {
             modDir = directory;
