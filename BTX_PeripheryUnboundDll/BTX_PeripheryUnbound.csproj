@@ -48,10 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModSettings.cs" />
+    <Compile Include="Timeline\AbandonedSystems.cs" />
     <Compile Include="Timeline\Contracts.cs" />
     <Compile Include="UI\ContractIntel.cs" />
     <Compile Include="Tools\StarSystemDefUpdater.cs" />
-    <Compile Include="Tools\FactionActivityTracker.cs" />
     <Compile Include="Timeline\Factions.cs" />
     <Compile Include="GlobalUsings.cs" />
     <Compile Include="Main.cs" />
@@ -109,5 +109,6 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
