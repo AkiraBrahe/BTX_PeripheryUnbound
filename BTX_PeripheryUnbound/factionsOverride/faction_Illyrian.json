@@ -42,7 +42,8 @@
   "heraldryDefId": "heraldrydef_Illyrian",
   "storePanelImage": null,
   "factionStoreColor": null,
-  "factionMapColor": "rgba(136,112,94,1.0)",
+  "factionMapBorderOverrideColor": "rgba(0,0,0,1.0)",
+  "factionMapColor": "rgba(175,238,238,1.0)",
   "StartingReputationValues": [
     -15,
     -15,

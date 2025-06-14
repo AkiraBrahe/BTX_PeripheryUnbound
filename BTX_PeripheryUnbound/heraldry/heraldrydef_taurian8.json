@@ -12,7 +12,7 @@
     "Icon": ""
   },
   "textureLogoID": "uixTxrLogo_TaurianConcordat8",
-  "primaryMechColorID": "Blue_04",
-  "secondaryMechColorID": "Blue_04",
-  "tertiaryMechColorID": "Red_03"
+  "primaryMechColorID": "Blue_02",
+  "secondaryMechColorID": "Blue_02",
+  "tertiaryMechColorID": "Red_01"
 }

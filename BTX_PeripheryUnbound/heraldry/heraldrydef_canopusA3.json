@@ -12,7 +12,7 @@
     "Icon": ""
   },
   "textureLogoID": "uixTxrLogo_MagistracyOfCanopusA3",
-  "primaryMechColorID": "BrightPurple_01",
-  "secondaryMechColorID": "BrightPurple_02",
+  "primaryMechColorID": "BrightPurple_02",
+  "secondaryMechColorID": "BrightPurple_01",
   "tertiaryMechColorID": "Greyscale_05"
 }

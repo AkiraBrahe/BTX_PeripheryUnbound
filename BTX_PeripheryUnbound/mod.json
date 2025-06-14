@@ -13,14 +13,17 @@
   "DLL": "BTX_PeripheryUnbound.dll",
 
   "Settings": {
-    "HideJumpPointsOnStarMap": true,
-    "IntelShowTarget": true,
-    "IntelShowVariant": true
+    "MapVisuals": {
+      "HighlightInhabitedSystems": true,
+      "HighlightStarClusters": true,
+      "HideJumpPoints": true
+    },
+    "ContractIntel": {
+      "IntelShowTarget": true,
+      "IntelShowVariant": true
+    }
   },
-
-  "DataAddendumEntries": [ 
-    { "name":"BattleTech.FactionEnumeration", "path":"enums/Faction.json", "AddToDB": true }
-  ],
+  
   "Manifest": [
     { "Type": "CastDef", "Path": "cast" },
     { "Type": "FactionDef", "Path": "factions", "AddToDB": true },
@@ -28,6 +31,7 @@
     { "Type": "HeraldryDef", "Path": "heraldry" },
     { "Type": "Sprite", "Path": "sprites" },
     { "Type": "Texture2D", "Path": "sprites" },
-    { "Type": "StarSystemDef", "Path": "starsystem"}
+    { "Type": "StarSystemDef", "Path": "starsystem"},
+    { "Type": "StarSystemDef", "Path": "starsystemJumpPoints"}
   ]
 }

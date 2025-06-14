@@ -41,6 +41,7 @@
   "heraldryDefId": "heraldrydef_tortuga",
   "storePanelImage": null,
   "factionStoreColor": null,
+  "factionMapBorderOverrideColor": "rgba(50,205,50,1.0)",
   "factionMapColor": "rgba(34,139,34,1.0)",
   "StartingReputationValues": [
     -15,

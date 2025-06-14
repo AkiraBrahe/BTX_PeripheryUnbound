@@ -38,7 +38,8 @@
   "heraldryDefId": "heraldrydef_lothian",
   "storePanelImage": null,
   "factionStoreColor": null,
-  "factionMapColor": "rgba(133,126,121,1.0)",
+  "factionMapBorderOverrideColor": "rgba(0,0,0,1.0)",
+  "factionMapColor": "rgba(191,172,152,1.0)",
   "StartingReputationValues": [
     -5,
     -5,

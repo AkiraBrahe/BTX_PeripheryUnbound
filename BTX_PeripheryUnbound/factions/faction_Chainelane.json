@@ -34,6 +34,7 @@
   "heraldryDefId": "heraldrydef_chainelane",
   "storePanelImage": null,
   "factionStoreColor": null,
+  "factionMapBorderOverrideColor": "rgba(0,0,0,1.0)",
   "factionMapColor": "rgba(56,49,124,1.0)",
   "StartingReputationValues": [
     -5,

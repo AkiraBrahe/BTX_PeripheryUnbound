@@ -12,7 +12,7 @@
     "Icon": ""
   },
   "textureLogoID": "uixTxrLogo_Calderon2",
-  "primaryMechColorID": "Green_04",
-  "secondaryMechColorID": "BrightOrange_01",
-  "tertiaryMechColorID": "Green_04"
+  "primaryMechColorID": "Green_02",
+  "secondaryMechColorID": "BrightOrange_02",
+  "tertiaryMechColorID": "Green_02"
 }

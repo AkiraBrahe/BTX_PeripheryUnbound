@@ -34,7 +34,7 @@
   "heraldryDefId": "heraldrydef_hellshorses",
   "storePanelImage": null,
   "factionStoreColor": null,
-  "factionMapColor": "rgba(241,168,110,1.0)",
+  "factionMapColor": "rgba(244,164,96,1.0)",
   "StartingReputationValues": [
     -15,
     -15,

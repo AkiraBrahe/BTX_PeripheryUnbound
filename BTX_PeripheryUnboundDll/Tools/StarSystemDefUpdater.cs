@@ -11,12 +11,17 @@ namespace BTX_PeripheryUnbound.Tools
         [HarmonyPatch(typeof(SimGameState), "Rehydrate")]
         public static class UpdateStarSystemDefsOnLoad
         {
+            private static bool StarSystemDefsUpdated = false;
+
+            [HarmonyPostfix]
             public static void Postfix(SimGameState __instance)
             {
-                if (Main.Settings.Debug.UpdateStarSystemDefsOnLoad)
+                if (Main.Settings.Debug.UpdateStarSystemDefsOnLoad && !StarSystemDefsUpdated)
                 {
                     UpdateStarSystemDefFiles(__instance, "Rehydrate");
                 }
+
+                StarSystemDefsUpdated = true;
             }
         }
 

@@ -8,7 +8,7 @@ namespace BTX_PeripheryUnbound.Timeline
     {
         private const string AuriganRestorationId = "faction_AuriganRestoration";
         private const string AuriganDirectorateId = "faction_AuriganDirectorate";
-        private static readonly DateTime PostRestorationDate = new(3025, 12, 30);
+        public static readonly DateTime PostRestorationDate = new(3025, 12, 30);
 
         [HarmonyPatch(typeof(UpdateOwnership), "UpdateFactions")]
         public static class UpdateAuriga
@@ -47,7 +47,7 @@ namespace BTX_PeripheryUnbound.Timeline
         }
 
         [HarmonyPatch(typeof(PirateHelper), "GetClosestPirate")]
-        public static class ChangeClosestPirate
+        public static class ExtendPirateInfluence
         {
             [HarmonyPostfix]
             public static void Postfix(ref string __result)
