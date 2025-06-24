@@ -9,28 +9,13 @@ namespace BTX_PeripheryUnbound.UI
     internal class StarMap
     {
         [HarmonyPatch(typeof(StarmapSystemRenderer), "SetStarVisibility")]
-        public static class HighlightInhabitedSystems
-        {
-            [HarmonyPrefix]
-            public static bool Prefix(ref bool __runOriginal, StarmapSystemRenderer __instance)
-            {
-                if (!(__runOriginal || !Main.Settings.MapVisuals.HighlightInhabitedSystems)) return true;
-
-                bool isAbandoned = __instance.system.System.Def.Tags.Contains("planet_other_empty");
-                __instance.starInner.gameObject.SetActive(!isAbandoned);
-                __instance.starInnerUnvisited.gameObject.SetActive(isAbandoned);
-
-                __runOriginal = false;
-                return false;
-            }
-        }
-
-        [HarmonyPatch(typeof(StarmapSystemRenderer), "SetStarVisibility")]
         public static class HighlightStarClusters
         {
             public class ClusterData
             {
-                public string Name { get; set; } public float Width { get; set; } public float Height { get; set; }
+                public string Name { get; set; }
+                public float Width { get; set; }
+                public float Height { get; set; }
             }
 
             private static readonly Dictionary<string, ClusterData> StarClusterSizes = new()
@@ -80,24 +65,86 @@ namespace BTX_PeripheryUnbound.UI
             }
         }
 
+        [HarmonyPatch(typeof(StarmapSystemRenderer), "SetStarVisibility")]
+        public static class HighlightInhabitedSystems
+        {
+            [HarmonyPrefix]
+            public static bool Prefix(StarmapSystemRenderer __instance)
+            {
+                if (Main.Settings.MapVisuals.HighlightInhabitedSystems)
+                {
+                    bool isAbandoned = __instance.system.System.Def.Tags.Contains("planet_other_empty");
+                    __instance.starInner.gameObject.SetActive(!isAbandoned);
+                    __instance.starInnerUnvisited.gameObject.SetActive(isAbandoned);
+
+                    return false;
+                }
+
+                return true;
+            }
+        }
+
+        [HarmonyPatch(typeof(StarmapSystemRenderer), "Init")]
+        public static class ShowPopulationlevels
+        {
+            [HarmonyPostfix]
+            public static void Postfix(StarmapSystemRenderer __instance)
+            {
+                if (Main.Settings.MapVisuals.HighlightInhabitedSystems &&
+                    Main.Settings.MapVisuals.ShowPopulationLevels &&
+                    !__instance.system.System.Def.Tags.Contains("planet_type_starcluster"))
+                {
+                    bool isAbandoned = __instance.system.System.Def.Tags.Contains("planet_other_empty");
+                    float starBrightness = 1f;
+
+                    if (!isAbandoned)
+                    {
+                        if (__instance.system.System.Def.Tags.items.Contains("planet_pop_large"))
+                        {
+                            starBrightness = 1.500f;
+                        }
+                        else if (__instance.system.System.Def.Tags.items.Contains("planet_pop_medium"))
+                        {
+                            starBrightness = 1.375f;
+                        }
+                        else if (__instance.system.System.Def.Tags.items.Contains("planet_pop_small"))
+                        {
+                            starBrightness = 1.250f;
+                        }
+                        else if (__instance.system.System.Def.Tags.items.Contains("planet_pop_none"))
+                        {
+                            starBrightness = 1.125f;
+                        }
+                    }
+
+                    MaterialPropertyBlock BrightnessMpb = new();
+                    BrightnessMpb.Clear();
+                    BrightnessMpb.SetColor("_Color", __instance.systemColor * starBrightness);
+                    __instance.starInner.SetPropertyBlock(BrightnessMpb);
+                    __instance.starInnerUnvisited.SetPropertyBlock(BrightnessMpb);
+                }
+            }
+        }
+
         [HarmonyPatch(typeof(StarmapSystemRenderer), "Init")]
         public static class ReduceStarBrightness
         {
             [HarmonyPostfix]
             public static void Postfix(StarmapSystemRenderer __instance)
             {
-                if (!Main.Settings.MapVisuals.HighlightInhabitedSystems ||
-                   (Main.Settings.MapVisuals.HighlightStarClusters && 
-                   __instance.system.System.Def.Tags.Contains("planet_type_starcluster"))) return;
+                if (Main.Settings.MapVisuals.HighlightInhabitedSystems &&
+                    !Main.Settings.MapVisuals.ShowPopulationLevels &&
+                    !__instance.system.System.Def.Tags.Contains("planet_type_starcluster"))
+                {
+                    bool isAbandoned = __instance.system.System.Def.Tags.Contains("planet_other_empty");
+                    float starBrightness = isAbandoned ? 1f : 1.5f;
 
-                bool isAbandoned = __instance.system.System.Def.Tags.Contains("planet_other_empty");
-                float starBrightness = isAbandoned ? 1f : 1.5f;
-
-                MaterialPropertyBlock BrightnessMpb = new();
-                BrightnessMpb.Clear();
-                BrightnessMpb.SetColor("_Color", __instance.systemColor * starBrightness);
-                __instance.starInner.SetPropertyBlock(BrightnessMpb);
-                __instance.starInnerUnvisited.SetPropertyBlock(BrightnessMpb);
+                    MaterialPropertyBlock BrightnessMpb = new();
+                    BrightnessMpb.Clear();
+                    BrightnessMpb.SetColor("_Color", __instance.systemColor * starBrightness);
+                    __instance.starInner.SetPropertyBlock(BrightnessMpb);
+                    __instance.starInnerUnvisited.SetPropertyBlock(BrightnessMpb);
+                }
             }
         }
 

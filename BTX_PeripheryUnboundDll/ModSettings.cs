@@ -15,8 +15,9 @@
 
     public class MapVisualSettings
     {
-        public bool HighlightInhabitedSystems { get; set; } = true;
         public bool HighlightStarClusters { get; set; } = true;
+        public bool HighlightInhabitedSystems { get; set; } = true;
+        public bool ShowPopulationLevels { get; set; } = true;
         public bool HideJumpPoints { get; set; } = true;
     }
 

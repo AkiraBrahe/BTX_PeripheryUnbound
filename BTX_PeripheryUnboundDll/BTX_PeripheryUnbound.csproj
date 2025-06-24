@@ -35,29 +35,23 @@
     <PublicizerRuntimeStrategies>Unsafe</PublicizerRuntimeStrategies>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="HarmonyX" Version="2.10.1" />
     <PackageReference Include="Krafs.Publicizer" Version="2.3.0" />
     <Publicize Include="Assembly-CSharp" />
     <Publicize Include="NavigationComputer" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="HarmonyX" Version="2.10.1">
-      <PrivateAssets>all</PrivateAssets>
-      <ExcludeAssets>runtime</ExcludeAssets>
-      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="ModSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Timeline\AbandonedSystems.cs" />
     <Compile Include="Timeline\Contracts.cs" />
-    <Compile Include="UI\ContractIntel.cs" />
-    <Compile Include="Tools\StarSystemDefUpdater.cs" />
     <Compile Include="Timeline\Factions.cs" />
-    <Compile Include="GlobalUsings.cs" />
-    <Compile Include="Main.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\StarSystemDefUpdater.cs" />
+    <Compile Include="UI\ContractIntel.cs" />
     <Compile Include="UI\RepScreen.cs" />
     <Compile Include="UI\StarMap.cs" />
+    <Compile Include="GlobalUsings.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="ModSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
@@ -109,6 +103,5 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
